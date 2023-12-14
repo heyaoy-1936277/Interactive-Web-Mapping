@@ -113,21 +113,21 @@
                     'fill-color': [
                         'step',
                         ['get', 'fullyVaxPer10k'],
-                        '#EDF8E9',   // stop_output_0
+                        '#FF5733',
                         1000,        // stop_input_0
-                        '#C7E9C0',   // stop_output_1
+                        '#FF7043',   // Slightly different red for values between 1000 and 2000
                         2000,        // stop_input_1
-                        '#A1D99B',   // stop_output_2
+                        '#FF8C53',   // Another shade of red for values between 2000 and 3000
                         3000,        // stop_input_2
-                        '#74C476',   // stop_output_3
+                        '#FFA763',   // Different red for values between 3000 and 4000
                         4000,        // stop_input_3
-                        '#41AB5D',   // stop_output_4
+                        '#FFC373',   // Yet another shade of red for values between 4000 and 5000
                         5000,        // stop_input_4
-                        '#238B45',   // stop_output_5
+                        '#FFDE83',   // Reddish color for values between 5000 and 6000
                         6000,        // stop_input_5
-                        '#006D2C',   // stop_output_6
+                        '#FFE694',   // Another shade of red for values between 6000 and 7000
                         7000,        // stop_input_6
-                        "#00441B"    // stop_output_7
+                        '#FFF4A4'    // Lighter reddish color for values great
                     ],
                     'fill-outline-color': '#BBBBBB',
                     'fill-opacity': 0.7,
@@ -146,14 +146,14 @@
             '6999 and more'
             ];
             const colors = [
-            '#edf8e9',
-            '#c7e9c0',
-            '#a1d99b',
-            '#74c476',
-            '#41ab5d',
-            '#238b45',
-            '#006d2c',
-            '#00441b'
+            '#FF5733',
+            '#FF7043',   
+            '#FF8C53',   // Another shade of red for values between 2000 and 3000
+            '#FFA763',   // Different red for values between 3000 and 4000
+            '#FFC373',   // Yet another shade of red for values between 4000 and 5000
+            '#FFDE83',   // Reddish color for values between 5000 and 6000
+            '#FFE694',   // Another shade of red for values between 6000 and 7000
+            '#FFF4A4'    // Lighter reddish color for values great
         ];
 
             const legend = document.getElementById('legend');
@@ -179,7 +179,7 @@
                     });
                     document.getElementById('text-description').innerHTML = covid.length ?
                         `<h3>${covid[0].properties.name}</h3><p><strong><em>${covid[0].properties.fullyVaxPer10k}</strong> rate per 10k people</em></p>` :
-                        `<p>Hover over any county! </p>`;
+                        `<p>Hover over any Washington County to see the Rate </p>`;
                 });
         }
         geojsonFetch();
